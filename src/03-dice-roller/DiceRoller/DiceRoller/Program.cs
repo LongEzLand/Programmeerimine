@@ -15,10 +15,10 @@ namespace DiceRoller
 
             //Dice dice = new Dice();
             int total = 0;
-            
-            
 
-            var dice6 = new Dice(6, "d6");
+
+
+            var dice6 = Dice.D6;
             for (int i = 0; i < 3; i++)
             {
                 int roll = dice6.Roll();
@@ -27,7 +27,7 @@ namespace DiceRoller
                 
             }
 
-            var dice8 = new Dice(8, "d8");
+            var dice8 = Dice.D8;
             for (int i = 0; i < 2; i++)
             {
                 int roll = dice8.Roll();
