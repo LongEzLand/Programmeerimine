@@ -8,10 +8,21 @@ namespace DiceRoller
 {
     class Dice
     {
-        public int Roll(int sides)
-        {
-            return new Random().Next(1, sides + 1);
+        private Random Random { get; }
+        private int Sides { get; }
+        public string Description { get; }
 
+        public Dice(int sides, string description)
+        {
+            this.Description = description;
+            this.Sides = sides;
+            this.Random = new Random();
+        }
+
+
+        public int Roll()
+        {
+            return this.Random.Next(1, this.Sides + 1);
 
         }
     }
