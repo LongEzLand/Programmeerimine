@@ -10,25 +10,34 @@ namespace DiceRoller
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("/roll 3d6 2d8");
+            Console.WriteLine("> /roll 3d6 2d8");
             Console.WriteLine();
 
             Random rnd = new Random();
-           
+            int total = 0;
+
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("1d6: " + rnd.Next(1, 7));
+                int roll = rnd.Next(1, 7);
+                total += roll;
+                Console.WriteLine($"1d6: { roll }");
+                
             }
+
             for (int i = 0; i < 2; i++)
             {
-                Console.WriteLine("1d8: " + rnd.Next(1, 9));
+                int roll = rnd.Next(1, 9);
+                total += roll;
+                Console.WriteLine($"1d6: { roll }");
+                
             }
             
            
             Console.WriteLine();
-            Console.WriteLine("Roll total: 20");
-
-            Console.WriteLine("Please press any key to continue...");
+            Console.WriteLine($"Roll total: { total }");
+            Console.WriteLine();
+            Console.Write("> ");
+            
             Console.ReadLine();
         }
     }
