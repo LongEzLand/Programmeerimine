@@ -13,12 +13,12 @@ namespace DiceRoller
             Console.WriteLine("> /roll 3d6 2d8");
             Console.WriteLine();
 
-            Random rnd = new Random();
+            Dice dice = new Dice();
             int total = 0;
 
             for (int i = 0; i < 3; i++)
             {
-                int roll = rnd.Next(1, 7);
+                int roll = dice.Roll(6);
                 total += roll;
                 Console.WriteLine($"1d6: { roll }");
                 
@@ -26,9 +26,9 @@ namespace DiceRoller
 
             for (int i = 0; i < 2; i++)
             {
-                int roll = rnd.Next(1, 9);
+                int roll = dice.Roll(8);
                 total += roll;
-                Console.WriteLine($"1d6: { roll }");
+                Console.WriteLine($"1d8: { roll }");
                 
             }
             
