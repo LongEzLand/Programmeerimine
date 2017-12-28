@@ -15,7 +15,9 @@ namespace Backjack.Core
 
         public GameTable(Deck _deck)
         {
-            _deck = deck;
+            deck = _deck;
+            userCards = new List<Card>();
+            houseCards = new List<Card>();
         }
 
       
@@ -23,16 +25,16 @@ namespace Backjack.Core
         public void DrawCards()
         {
             //Get player cards
-            userCards.Add(deck.Next());
+            userCards.Add(this.deck.Next());
+            houseCards.Add(this.deck.Next());
 
             //Unhide all cards but last
-            for(int i=0; i<houseCards.Count(); i++)
+            for (int i=0; i<houseCards.Count(); i++)
             {
                 houseCards.ElementAt(i).Hidden = false;
             }
             if (houseCards.Count() > 1)
             {
-                houseCards.Add(deck.Next());
                 houseCards.Last().Hidden = true;
             }
         }
@@ -53,7 +55,7 @@ namespace Backjack.Core
 
             for (int i = 0; i < houseCards.Count(); i++)
             {
-                housePoints += userCards.ElementAt(i).GetCardPoints();
+                housePoints += houseCards.ElementAt(i).GetCardPoints();
             }
             return housePoints;
         }
