@@ -7,6 +7,8 @@
 
         public string Description => _rank + _suite.GetShortName();
 
+       
+
         //Kui booleani ei väärtustata, siis ta on vaikimisi false. 
         public bool Hidden { get; set; }
 
@@ -25,6 +27,11 @@
 
             //Description = _rank + _suite; --> selle tõistsime ülesse ja tegime kohe: Description => _rank + _suite (mis tähendab, et get, returnib siis _rank + _suite)
 
+        }
+
+        public int GetCardPoints()
+        {
+            return this._points;
         }
     }
 }
