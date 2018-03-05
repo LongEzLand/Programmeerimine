@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECP.API", "ECP.API\ECP.API.csproj", "{CEB25BE8-FF0E-4B3A-863A-AF2F94A5F30B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEB25BE8-FF0E-4B3A-863A-AF2F94A5F30B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB25BE8-FF0E-4B3A-863A-AF2F94A5F30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB25BE8-FF0E-4B3A-863A-AF2F94A5F30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB25BE8-FF0E-4B3A-863A-AF2F94A5F30B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5A49E61-83AC-46F1-AF74-ABB510337F98}
+	EndGlobalSection
+EndGlobal
